@@ -7,7 +7,6 @@ Description: Multul Wordpress Module
 Author: Alter
 Version: 0.1
 Author URI:
-multul-wordpress-plugin-version:1.0
  */
 
 if (is_admin ()) {
