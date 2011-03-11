@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: multul
-Plugin URI: https://github.com/TIgorr/Multul-Wordpress-Module
+Plugin URI: https://github.com/multul/Multul-Wordpress-Plugin
 Description: Multul Wordpress Module
 Author: Alter
 Version: 0.1
