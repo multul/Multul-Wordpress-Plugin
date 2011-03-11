@@ -23,7 +23,7 @@ function multul_get_link($author) {
 	$current_id		= $current_user->id;
 	$capabilities	= $current_user->wp_capabilities;
 
-	if (!empty($capabilities) && $current_id != $user_id) {
+	if (!empty($capabilities) && $current_id != $user_id && get_option('multul_ucp_status')) {
 		echo $author . '<a href="javascript:;" onclick="multul.im.openContact(' . $user_id . ',\'' . $author . '\')"><img src="http://multul.ru/media/images/messenger/chats.gif" alt="" /></a><br>';
 	} else {
 		echo $author;
@@ -56,7 +56,17 @@ function multul_init() {
 }
 
 function remove_footer() {
+    if (get_option('multul_ucp_status')){
 	echo multul_init();
+    }
 }
 
 add_filter('wp_footer', 'remove_footer');
+
+function remove_adm_footer(){
+    if (get_option('multul_acp_status')){
+        echo multul_init();
+    }
+}
+
+add_filter('admin_footer','remove_adm_footer');

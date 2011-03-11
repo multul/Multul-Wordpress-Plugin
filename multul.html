@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
 	<body>
-		<form action="" method="POST">
+            <form action="" method="POST">
 			<table>
 				<tr>
 					<td>Multul ID:</td>
@@ -19,6 +19,26 @@
 						<input type="text" name="multul_key" value="<?=get_option('multul_key')?>" />
 					</td>
 				</tr>
+                                <tr>
+                                        <td>Multul in admin console: </td>
+                                        <td><?=isset($_POST['acp_active']) ? $_POST['acp_active'] : $multul_acp_status?></td>
+                                </tr>
+                                <tr>
+                                        <td>
+                                            <input type="radio" name="acp_active" value="On" checked>On</input>
+                                            <input type="radio" name="acp_active" value="Off">Off</input>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>Multul in blog: </td>
+                                        <td><?=isset($_POST['ucp_active']) ? $_POST['ucp_active'] : $multul_ucp_status?></td>
+                                </tr>
+                                <tr>
+                                        <td>
+                                            <input type="radio" name="ucp_active" value="On" checked>On</input>
+                                            <input type="radio" name="ucp_active" value="Off">Off</input>
+                                        </td>
+                                </tr>
 			</table>
 			<input type="submit" value="Обновить" />
 		</form>
