@@ -24,7 +24,7 @@ function multul_get_link($author) {
 	$capabilities	= $current_user->wp_capabilities;
 
 	if (!empty($capabilities) && $current_id != $user_id && get_option('multul_ucp_status')) {
-		echo $author . '<a href="javascript:;" onclick="multul.im.openContact(' . $user_id . ',\'' . $author . '\')"><img src="http://multul.ru/media/images/messenger/chats.gif" alt="" /></a><br>';
+		echo $author . '<a href="javascript:;" onclick="multul.im.openContact(' . $user_id . ',\'' . $author . '\')"><img src="http://cdn.multul.ru/v1/images/messenger/send_msg.png" alt="" /></a><br>';
 	} else {
 		echo $author;
 	}
